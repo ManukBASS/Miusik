@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a2d47808b7.js" crossorigin="anonymous"></script>
+    <title>Miusik</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <p id="logo">
+            <i class="fa-solid fa-music"></i></i> Miusik
+        </p>
+
+        <!-- Left side -->
+        <div class="left">
+
+            <!--- Song Img -->
+            <img src="" alt="" id="track_image">
+
+            <!-- Volume -->
+            <div class="volume">
+                <p id="volume_show">90</p>
+
+                <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+            </div>
+
+        </div>
+
+        <!-- Right side -->
+        <div class="right">
+
+            <div class="show_song_no">
+                <p id="present">1</p>
+                <p>/</p>
+                <p id="total">5</p>
+            </div>
+
+            <!-- Song title -->
+            <p id="title">title.mp3</p>
+            <p id="artist">Artist name</p>
+
+            <!-- Middle -->
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            </div>
+
+            <!-- Song duration -->
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+            </div>
+            <button id="auto" onclick="autoplay_switch()">Auto-Play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+
+    <script src="/scripts/script.js"></script>
+
+</body>
+
+</html>
